@@ -1,11 +1,13 @@
 var url = 'http://api.icndb.com/jokes/random';
-
+var paragraph = document.getElementById('joke');
 var button = document.getElementById('get-joke');
+
+getJoke() 
+
 button.addEventListener('click',function() {
 	getJoke();
-});
-
-var paragraph = document.getElementById('joke');
+}
+);
 
 function getJoke() {
 	var xhr = new XMLHttpRequest();
@@ -15,4 +17,5 @@ function getJoke() {
 		paragraph.innerHTML = response.value.joke;
 	})
 	xhr.send();
+	
 }
