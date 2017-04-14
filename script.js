@@ -16,6 +16,5 @@ function getJoke() {
 		var response = JSON.parse(xhr.response);
 		paragraph.innerHTML = response.value.joke;
 	})
-	xhr.send();
-	
+	xhr.send();	
 }
